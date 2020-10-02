@@ -140,7 +140,12 @@ public class MusicOrganizer
         {
             player.startPlaying(tracks.get(index).getFilename());
         }
-     }
+    }
+    
+    public void playAllRandom()
+    {
+        
+    }
     
     /**
      * Stop the player.
