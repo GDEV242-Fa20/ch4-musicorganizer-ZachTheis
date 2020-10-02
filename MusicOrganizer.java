@@ -120,6 +120,7 @@ public class MusicOrganizer
     
     /**
      * Play the first track in the collection, if there is one.
+     * This satisties Exercise 4.43
      */
     public void playFirst()
     {
@@ -135,7 +136,10 @@ public class MusicOrganizer
     {
         Random randSong = new Random();
         int index = randSong.nextInt(tracks.size());
-        player.startPlaying(tracks.get(index).getFilename());
+        if(tracks.size() > 0)
+        {
+            player.startPlaying(tracks.get(index).getFilename());
+        }
      }
     
     /**
