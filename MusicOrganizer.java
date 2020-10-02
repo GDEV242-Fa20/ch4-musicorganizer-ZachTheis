@@ -144,7 +144,18 @@ public class MusicOrganizer
     
     public void playAllRandom()
     {
-        
+        ArrayList<Track> tracksCopy = new ArrayList();
+        Random rand = new Random();
+        for(Track song : tracks)
+        {
+            tracksCopy.add(song);
+        }
+        while(tracksCopy.size() > 0)
+        {
+            int index = rand.nextInt(tracksCopy.size());
+            player.startPlaying(tracksCopy.get(index).getFilename());
+            tracksCopy.remove(index);
+        }
     }
     
     /**
@@ -186,7 +197,8 @@ public class MusicOrganizer
         ArrayList<Track> tempTracks = reader.readTracks(folderName, ".mp3");
 
         // Put all thetracks into the organizer.
-        for(Track track : tempTracks) {
+        for(Track track : tempTracks) 
+        {
             addTrack(track);
         }
     }
