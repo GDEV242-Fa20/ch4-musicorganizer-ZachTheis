@@ -154,7 +154,7 @@ public class MusicOrganizer
         while(tracksCopy.size() > 0)
         {
             int index = rand.nextInt(tracksCopy.size());
-            player.startPlaying(tracksCopy.get(index).getFilename());
+            player.playSample(tracksCopy.get(index).getFilename());
             System.out.println
                 ("Now playing: " + tracksCopy.get(index).getTitle());
             tracksCopy.remove(index);
