@@ -120,7 +120,6 @@ public class MusicOrganizer
     
     /**
      * Play the first track in the collection, if there is one.
-     * This satisties Exercise 4.43
      */
     public void playFirst()
     {
@@ -131,6 +130,7 @@ public class MusicOrganizer
     
     /**
      * Play a random track in the collection, if there are any.
+     * Satisfies 4.43
      */
     public void playRandom()
     {
@@ -142,6 +142,10 @@ public class MusicOrganizer
         }
     }
     
+    /**
+     * Plays a sample of each track, in random order, never repeating.
+     * Satisfies 4.45
+     */
     public void playAllRandom()
     {
         ArrayList<Track> tracksCopy = new ArrayList();
